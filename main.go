@@ -14,5 +14,12 @@ func main() {
 			"msg": "hello from api",
 		})
 	})
+
+	r.GET("/me", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"msg": "hello, its me :D",
+		})
+	})
+
 	r.Run()
 }
