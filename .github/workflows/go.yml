@@ -35,7 +35,7 @@ jobs:
           tags: kobulwidodo/go-simple-api:latest
 
       - name: Deploy to EC2
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.HOST_AWS }}
           username: ${{ secrets.USERNAME_AWS }}
