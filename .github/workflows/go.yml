@@ -42,7 +42,5 @@ jobs:
           key: ${{ secrets.KEY_AWS }}
           script: |
             sudo docker pull kobulwidodo/go-simple-api:latest
-            sudo docker stop go-app
-            sudo docker rm go-app
             sudo docker container create --name go-app -p 8080:8080 kobulwidodo/go-simple-api
             sudo docker container start go-app
